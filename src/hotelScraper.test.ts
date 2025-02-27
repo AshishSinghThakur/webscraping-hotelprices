@@ -93,8 +93,6 @@ async function scrapeLowestPrice(city: string) {
     } catch (error) {
         console.error("Error scraping hotel prices:", error);
         throw error;
-    } finally {
-        await page.close();
     }
 }
 
