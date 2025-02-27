@@ -78,7 +78,6 @@ async function scrapeLowestPrice(city: string) {
             return;
         }
 
-        // ✅ FIX: Explicitly cast `el` as `HTMLElement`
         const hotelName = await hotelCard.$eval('[data-testid="title"]', el => (el as HTMLElement).innerText);
         const hotelLink = await hotelCard.$eval('[data-testid="title-link"]', el => (el as HTMLAnchorElement).href);
 
